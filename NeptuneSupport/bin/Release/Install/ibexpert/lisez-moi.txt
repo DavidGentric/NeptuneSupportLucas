@@ -1,0 +1,3 @@
+Installer la version "customer" (la personnal ne fonctionne plus).
+Répondre "No" à la question "Do you prefer single document interface" (à la première ouverture).
+Copier le fichier Site_Microtec_IBExpert.lic dans le répertoire contenant ibexpert.exe et renommez le en ibexpert.lic

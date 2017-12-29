@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B33479C3-8DB6-48EC-8D19-96AE3FEAD631}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NeptuneSupport</RootNamespace>
+    <AssemblyName>NeptuneSupport</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=5.9.1.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.5.9.1\lib\net452\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LibUser">
+      <HintPath>..\..\LibUser\LibUser\bin\Debug\LibUser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChoixOU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoixOU.Designer.cs">
+      <DependentUpon>ChoixOU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoixVierge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoixVierge.Designer.cs">
+      <DependentUpon>ChoixVierge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connexion.Designer.cs">
+      <DependentUpon>Connexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnexionRdp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnexionRdp.Designer.cs">
+      <DependentUpon>ConnexionRdp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licence.Designer.cs">
+      <DependentUpon>Licence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modele.cs" />
+    <Compile Include="Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page.Designer.cs">
+      <DependentUpon>Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoixAlias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoixAlias.Designer.cs">
+      <DependentUpon>ChoixAlias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NouveauUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NouveauUser.Designer.cs">
+      <DependentUpon>NouveauUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NouvelleOU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NouvelleOU.Designer.cs">
+      <DependentUpon>NouvelleOU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupNbUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupNbUsers.Designer.cs">
+      <DependentUpon>PopupNbUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="ChoixOU.resx">
+      <DependentUpon>ChoixOU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoixVierge.resx">
+      <DependentUpon>ChoixVierge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connexion.resx">
+      <DependentUpon>Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnexionRdp.resx">
+      <DependentUpon>ConnexionRdp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licence.resx">
+      <DependentUpon>Licence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page.resx">
+      <DependentUpon>Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoixAlias.resx">
+      <DependentUpon>ChoixAlias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NouveauUser.resx">
+      <DependentUpon>NouveauUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NouvelleOU.resx">
+      <DependentUpon>NouvelleOU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupNbUsers.resx">
+      <DependentUpon>PopupNbUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMSTSCLib">
+      <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSTSCLib">
+      <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
